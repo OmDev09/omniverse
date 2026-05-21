@@ -176,27 +176,113 @@ function animateNetwork() {
 
 animateNetwork();
 
-// Add Reveal Classes Dynamically
-const sectionsToReveal = document.querySelectorAll('.section-header, .services-grid, .portfolio-grid, .process-steps, .features-bento, .stats-grid, .testimonial-slider, .contact-wrapper');
-sectionsToReveal.forEach(el => {
-  el.classList.add('reveal');
-});
+// Register GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-// Scroll Reveal Logic
-function revealScroll() {
-  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 100; // Trigger point
-
-    if (elementTop < windowHeight - elementVisible) {
-      element.classList.add('active');
-    }
+// Only initialize scroll animations after the intro animation completes
+setTimeout(() => {
+  // 1. Animate Section Headers
+  gsap.utils.toArray('.section-header').forEach(header => {
+    gsap.from(header, {
+      scrollTrigger: {
+        trigger: header,
+        start: "top 85%", // Trigger when top of header is 85% down viewport
+        toggleActions: "play none none reverse"
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    });
   });
-}
 
-window.addEventListener('scroll', revealScroll);
-// Check for elements in view after initial intro animations
-setTimeout(revealScroll, 1500);
+  // 2. Staggered reveal for Service Cards
+  gsap.from('.service-card', {
+    scrollTrigger: {
+      trigger: '.services-grid',
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
+
+  // 3. Staggered reveal for Portfolio Cards
+  gsap.from('.portfolio-card', {
+    scrollTrigger: {
+      trigger: '.portfolio-grid',
+      start: "top 80%",
+    },
+    scale: 0.9,
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "back.out(1.2)"
+  });
+
+  // 4. Staggered reveal for Process Steps
+  gsap.from('.step-card', {
+    scrollTrigger: {
+      trigger: '.process-steps',
+      start: "top 80%",
+    },
+    x: -50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // 5. Staggered reveal for Bento Box Features
+  gsap.from('.features-bento .feature-card', {
+    scrollTrigger: {
+      trigger: '.features-bento',
+      start: "top 80%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power3.out"
+  });
+
+  // 6. Testimonial Cards
+  gsap.from('.testimonial-card', {
+    scrollTrigger: {
+      trigger: '.testimonial-slider',
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // 7. Contact Section split reveal
+  gsap.from('.contact-info', {
+    scrollTrigger: {
+      trigger: '.contact-wrapper',
+      start: "top 80%",
+    },
+    x: -50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from('.contact-form-container', {
+    scrollTrigger: {
+      trigger: '.contact-wrapper',
+      start: "top 80%",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+}, 1500);
