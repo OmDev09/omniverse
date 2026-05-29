@@ -273,7 +273,7 @@ setTimeout(() => {
     duration: 1,
     ease: "power3.out"
   });
-  
+
   gsap.from('.contact-form-container', {
     scrollTrigger: {
       trigger: '.contact-wrapper',
@@ -286,3 +286,41 @@ setTimeout(() => {
   });
 
 }, 1500);
+
+// Hero Visual Storytelling Controller
+const stepIndicators = document.querySelectorAll('.step-indicator-item');
+const stepContents = document.querySelectorAll('.dashboard-step-content');
+let activeStep = 1;
+const totalSteps = 4;
+
+function showStep(stepNum) {
+  stepIndicators.forEach(ind => {
+    if (parseInt(ind.getAttribute('data-step')) === stepNum) {
+      ind.classList.add('active');
+    } else {
+      ind.classList.remove('active');
+    }
+  });
+
+  stepContents.forEach((content, index) => {
+    if (index + 1 === stepNum) {
+      content.classList.add('active');
+    } else {
+      content.classList.remove('active');
+    }
+  });
+}
+
+// Auto Cycle Steps
+setInterval(() => {
+  activeStep = (activeStep % totalSteps) + 1;
+  showStep(activeStep);
+}, 4000);
+
+// Allow manual clicks too
+stepIndicators.forEach(ind => {
+  ind.addEventListener('click', () => {
+    activeStep = parseInt(ind.getAttribute('data-step'));
+    showStep(activeStep);
+  });
+});

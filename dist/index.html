@@ -1,442 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omniverse | Crafting your digital presence</title>
-    <meta name="description" content="Omniverse is a digital web agency that builds visually impressive, responsive, fast, and scalable websites." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-BYu1q4P8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DelTATwB.css">
-  </head>
-  <body>
-    <!-- Background Canvas for network animation -->
-    <canvas id="network-canvas"></canvas>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container nav-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omniverse | Crafting your digital presence</title>
+  <meta name="description"
+    content="Omniverse is a digital web agency that builds visually impressive, responsive, fast, and scalable websites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-BTT3EvyW.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C9qzajb0.css">
+</head>
+
+<body class="intro-active">
+  <!-- Intro Overlay -->
+  <div id="intro-overlay">
+    <h1 class="intro-text">OMNIVERSE</h1>
+  </div>
+  <!-- Background Canvas for network animation -->
+  <canvas id="network-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Omniverse<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact" class="btn btn-nav">Contact Us</a>
+      </div>
+      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Building Digital Experiences <br><span class="text-gradient">That Matter</span></h1>
+        <h2 class="hero-subtitle">Crafting your digital presence</h2>
+        <p class="hero-text">We build websites that grow businesses and help brands establish a strong online identity.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="glass-card workflow-dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-dots">
+              <span class="circle red"></span>
+              <span class="circle yellow"></span>
+              <span class="circle green"></span>
+            </div>
+            <div class="dashboard-title">OMNIVERSE PROCESS ENGINE v2.5</div>
+            <div class="dashboard-status-dot"></div>
+          </div>
+
+          <div class="dashboard-steps-indicator">
+            <div class="step-indicator-item active" data-step="1"><span>01</span> Inquiry</div>
+            <div class="step-indicator-item" data-step="2"><span>02</span> Build</div>
+            <div class="step-indicator-item" data-step="3"><span>03</span> Launch</div>
+            <div class="step-indicator-item" data-step="4"><span>04</span> Scale</div>
+          </div>
+
+          <div class="dashboard-body">
+            <!-- Step 1 Content -->
+            <div class="dashboard-step-content active" id="step-1-content">
+              <div class="inquiry-card glass-card">
+                <div class="inquiry-header">
+                  <div class="avatar-placeholder">🧑‍💻</div>
+                  <div class="avatar-details" style="flex-grow: 1;">
+                    <div class="skel-line w-60"></div>
+                    <div class="skel-line w-40"></div>
+                  </div>
+                </div>
+                <div class="inquiry-body">
+                  <div class="chat-bubble left">"We need a premium website that converts."</div>
+                  <div class="chat-bubble right pulse-cta">Connecting to Omniverse...</div>
+                </div>
+                <div class="inquiry-action">
+                  <div class="action-btn">Intake Approved</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 Content -->
+            <div class="dashboard-step-content" id="step-2-content">
+              <div class="build-card glass-card">
+                <div class="build-header">
+                  <span>Code & Design Engine</span>
+                  <span class="pulse-code">&lt;/&gt;</span>
+                </div>
+                <div class="build-layout-grid">
+                  <div class="grid-wireframe-item"
+                    style="border: 1.5px dashed rgba(15, 23, 42, 0.15); border-radius: 6px; padding: 10px;">
+                    <div class="skel-line w-60"></div>
+                    <div class="skel-line w-80"></div>
+                  </div>
+                  <div class="grid-wireframe-item"
+                    style="border: 1.5px dashed rgba(15, 23, 42, 0.15); border-radius: 6px; padding: 10px;">
+                    <div class="skel-box" style="height: 30px; background: rgba(15,23,42,0.04);"></div>
+                  </div>
+                </div>
+                <div class="build-console">
+                  <div class="console-line">&gt; const agency = new Omniverse();</div>
+                  <div class="console-line">&gt; agency.buildCustomWebapp();</div>
+                  <div class="console-line glow-green">&gt; Status: Compiling components... 87%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 Content -->
+            <div class="dashboard-step-content" id="step-3-content">
+              <div class="launch-card glass-card">
+                <div class="launch-preview-browser">
+                  <div class="browser-tab">Live Website Preview</div>
+                  <div class="browser-preview-body">
+                    <div class="preview-hero">
+                      <div class="preview-logo">Omniverse.</div>
+                      <div class="skel-line w-60" style="background:#3b82f6;"></div>
+                      <div class="skel-line w-80"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="launch-preview-mobile">
+                  <div class="mobile-notch"></div>
+                  <div class="mobile-body">
+                    <div class="skel-line w-80"></div>
+                    <div class="skel-box" style="height: 60px; background: rgba(15,23,42,0.04);"></div>
+                  </div>
+                </div>
+                <div class="launch-badge">
+                  <span>🚀 LIVE & RESPONSIVE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 Content -->
+            <div class="dashboard-step-content" id="step-4-content">
+              <div class="scale-card glass-card">
+                <div class="scale-header">
+                  <span>Hypergrowth Engine</span>
+                  <span class="scale-badge">+340%</span>
+                </div>
+                <div class="scale-chart-container">
+                  <svg viewBox="0 0 300 120" class="growth-chart">
+                    <path class="chart-path-bg" d="M10,110 Q80,90 150,50 T290,10" fill="none"
+                      stroke="rgba(59,130,246,0.1)" stroke-width="3" />
+                    <path class="chart-path" d="M10,110 Q80,90 150,50 T290,10" fill="none" stroke="url(#chart-grad)"
+                      stroke-width="4" />
+                    <defs>
+                      <linearGradient id="chart-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ec4899" />
+                        <stop offset="100%" stop-color="#0284c7" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="scale-metrics">
+                  <div class="metric-item">
+                    <span class="metric-val">+248%</span>
+                    <span class="metric-lbl">Traffic</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">+$18.4K</span>
+                    <span class="metric-lbl">Revenue</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">128+</span>
+                    <span class="metric-lbl">Leads</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Expertise</h2>
+        <p>Comprehensive digital solutions tailored for your growth</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-laptop-code service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Portfolio Websites</h3>
+          </div>
+          <p>Showcase your work with stunning, interactive portfolios designed to impress.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-building service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Business Websites</h3>
+          </div>
+          <p>Establish credibility and drive leads with professional corporate web presence.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-shopping-cart service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>E-Commerce</h3>
+          </div>
+          <p>Scalable and secure online stores built to maximize your sales conversion.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-pager service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Landing Pages</h3>
+          </div>
+          <p>High-converting, focused single pages designed for specific marketing campaigns.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-cogs service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Custom Web Solutions</h3>
+          </div>
+          <p>Tailor-made web applications to solve your unique business challenges.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-object-group service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>UI/UX Design</h3>
+          </div>
+          <p>Intuitive and beautiful user interfaces focused on delivering great experiences.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-search-plus service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>SEO Optimization</h3>
+          </div>
+          <p>Data-driven strategies to improve your visibility and rank higher on search engines.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-tools service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Maintenance</h3>
+          </div>
+          <p>Ongoing support, updates, and security monitoring to keep your site running smoothly.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-video service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Reels & Video Editing</h3>
+          </div>
+          <p>High-retention video editing and creative reels designed to capture attention and scale reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section-padding dark-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Glimpses of our work</h2>
+        <p>A glimpse into our recent successful digital transformations</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card wide-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-1"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://omniverse-fintech.vercel.app" target="_blank" class="view-btn">View Website</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>FinTech Dashboard</h3>
+            <p>SaaS / Web App</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-2"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://omniverse-nexus.vercel.app" target="_blank" class="view-btn">View Website</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Nexus E-Commerce</h3>
+            <p>E-Commerce</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-3"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://aura-omniverse.vercel.app" target="_blank" class="view-btn">View Website</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Aura Real Estate</h3>
+            <p>Corporate</p>
+          </div>
+        </div>
+        <div class="portfolio-card wide-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-4"></div>
+              </div>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="https://baithack.vercel.app/" target="_blank" class="view-btn">View Website</a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h3>Baithak</h3>
+            <p>Startup / SaaS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>How We Work</h2>
+        <p>A proven methodology for delivering excellence</p>
+      </div>
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Understanding Your Business</h3>
+          <p>We dive deep into your goals, target audience, and market landscape.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>Planning & Strategy</h3>
+          <p>Creating comprehensive sitemaps, wireframes, and a clear roadmap.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Design & Development</h3>
+          <p>Crafting stunning visuals and writing clean, scalable code.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3>Testing & Optimization</h3>
+          <p>Rigorous QA testing across devices to ensure peak performance.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">05</div>
+          <h3>Launch & Support</h3>
+          <p>Smooth deployment followed by ongoing maintenance and scaling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="about" class="why-us section-padding dark-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Omniverse Advantage</h2>
+        <p>Why modern age companies & customer partner with us !</p>
+      </div>
+      <div class="features-bento">
+        <div class="feature-card glass-card bento-wide">
+          <i class="fas fa-rocket feature-icon"></i>
+          <div class="feature-content">
+            <h3>Fast Delivery</h3>
+            <p>We deploy high-performance applications in record time without compromising quality or scalability.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <i class="fas fa-mobile-alt feature-icon"></i>
+          <div class="feature-content">
+            <h3>Responsive Design</h3>
+            <p>Flawless experiences across all devices and screen sizes.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <div class="feature-content">
+            <h3>SEO Optimized</h3>
+            <p>Built-in technical SEO to rank higher on search engines.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card bento-wide">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <div class="feature-content">
+            <h3>Secure Websites</h3>
+            <p>Enterprise-grade security protocols to keep your data and customers completely safe.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <i class="fas fa-paint-brush feature-icon"></i>
+          <div class="feature-content">
+            <h3>Modern UI</h3>
+            <p>Stunning, award-winning designs that captivate and convert users.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <i class="fas fa-headset feature-icon"></i>
+          <div class="feature-content">
+            <h3>Ongoing Support</h3>
+            <p>Dedicated ongoing maintenance and monitoring for complete peace of mind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="statistics section-padding">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="150">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-label">Support Availability</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section-padding dark-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Client Success Stories</h2>
+        <p>Don't just take our word for it</p>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonial-card glass-card">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Omniverse transformed our online presence completely. The new platform is blazing
+            fast and our conversion rates have doubled since the launch."</p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=47" alt="Sarah Jenkins" class="client-avatar">
+            <div>
+              <h4>Sarah Jenkins</h4>
+              <p>CEO, TechFlow</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Professional, highly skilled and incredibly responsive. The team understood our
+            complex requirements and delivered a stunning SaaS dashboard."</p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=11" alt="David Chen" class="client-avatar">
+            <div>
+              <h4>David Chen</h4>
+              <p>Founder, Elevate AI</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The aesthetic and performance of our e-commerce site is top-tier. Omniverse
+            really knows how to build digital experiences that sell."</p>
+          <div class="client-info">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Elena Rodriguez" class="client-avatar">
+            <div>
+              <h4>Elena Rodriguez</h4>
+              <p>Marketing Director, LuxBrands</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Let's build something amazing together.</h2>
+          <p>Ready to elevate your digital presence? Get in touch with our team today.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Call Us</h4>
+                <p>+91 7770033799</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Mumbai, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>hello@omniverse.agency</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/917770033799" class="btn btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-form-container glass-card">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="business-type">Business Type</label>
+              <select id="business-type">
+                <option value="">Select an option</option>
+                <option value="startup">Startup</option>
+                <option value="ecommerce">E-Commerce</option>
+                <option value="corporate">Corporate / Agency</option>
+                <option value="local">Local Business</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="project-details">Project Details</label>
+              <textarea id="project-details" rows="4" placeholder="Tell us about your project goals..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
         <a href="#" class="logo">Omniverse<span class="dot">.</span></a>
-        <div class="nav-links">
+        <p class="footer-tagline">Crafting your digital presence</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#process">Process</a>
-          <a href="#about">About</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact" class="btn btn-nav">Contact Us</a>
+          <a href="#contact">Contact</a>
         </div>
-        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
       </div>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; <span id="year"></span> Omniverse. All rights reserved.</p>
+        <p class="bottom-line">Mumbai Based | Serving Clients Worldwide</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title">Building Digital Experiences <span class="text-gradient">Without Borders</span></h1>
-          <h2 class="hero-subtitle">Crafting your digital presence</h2>
-          <p class="hero-text">We build websites that grow businesses and help brands establish a strong online identity.</p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get Started</a>
-            <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="mockup-container">
-            <div class="glass-card mockup mockup-1">
-              <div class="mockup-header">
-                <span class="circle red"></span><span class="circle yellow"></span><span class="circle green"></span>
-              </div>
-              <div class="mockup-body">
-                <div class="skeleton-line skeleton-title"></div>
-                <div class="skeleton-line"></div>
-                <div class="skeleton-line w-80"></div>
-                <div class="skeleton-box"></div>
-              </div>
-            </div>
-            <div class="glass-card mockup mockup-2">
-              <div class="mockup-header">
-                <span class="circle red"></span><span class="circle yellow"></span><span class="circle green"></span>
-              </div>
-              <div class="mockup-body">
-                <div class="skeleton-line w-60"></div>
-                <div class="skeleton-graph"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+</body>
 
-    <!-- Services Section -->
-    <section id="services" class="services section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Expertise</h2>
-          <p>Comprehensive digital solutions tailored for your growth</p>
-        </div>
-        <div class="services-grid">
-          <div class="service-card glass-card">
-            <i class="fas fa-laptop-code service-icon"></i>
-            <h3>Portfolio Websites</h3>
-            <p>Showcase your work with stunning, interactive portfolios designed to impress.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-building service-icon"></i>
-            <h3>Business Websites</h3>
-            <p>Establish credibility and drive leads with professional corporate web presence.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-shopping-cart service-icon"></i>
-            <h3>E-Commerce</h3>
-            <p>Scalable and secure online stores built to maximize your sales conversion.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-pager service-icon"></i>
-            <h3>Landing Pages</h3>
-            <p>High-converting, focused single pages designed for specific marketing campaigns.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-cogs service-icon"></i>
-            <h3>Custom Web Solutions</h3>
-            <p>Tailor-made web applications to solve your unique business challenges.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-object-group service-icon"></i>
-            <h3>UI/UX Design</h3>
-            <p>Intuitive and beautiful user interfaces focused on delivering great experiences.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-search-plus service-icon"></i>
-            <h3>SEO Optimization</h3>
-            <p>Data-driven strategies to improve your visibility and rank higher on search engines.</p>
-          </div>
-          <div class="service-card glass-card">
-            <i class="fas fa-tools service-icon"></i>
-            <h3>Maintenance</h3>
-            <p>Ongoing support, updates, and security monitoring to keep your site running smoothly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section-padding dark-bg">
-      <div class="container">
-        <div class="section-header">
-          <h2>Selected Work</h2>
-          <p>A glimpse into our recent successful digital transformations</p>
-        </div>
-        <div class="portfolio-filter">
-          <button class="filter-btn active">All</button>
-          <button class="filter-btn">E-Commerce</button>
-          <button class="filter-btn">Corporate</button>
-          <button class="filter-btn">SaaS</button>
-        </div>
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-image proj-1">
-              <div class="portfolio-overlay">
-                <a href="#" class="view-btn">View Case Study</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>FinTech Dashboard</h3>
-              <p>SaaS / Web App</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-image proj-2">
-              <div class="portfolio-overlay">
-                <a href="#" class="view-btn">View Case Study</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Nexus E-Commerce</h3>
-              <p>E-Commerce</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-image proj-3">
-              <div class="portfolio-overlay">
-                <a href="#" class="view-btn">View Case Study</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Aura Real Estate</h3>
-              <p>Corporate</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-image proj-4">
-              <div class="portfolio-overlay">
-                <a href="#" class="view-btn">View Case Study</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Lumina AI</h3>
-              <p>Startup / SaaS</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>How We Work</h2>
-          <p>A proven methodology for delivering excellence</p>
-        </div>
-        <div class="process-steps">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3>Understanding Your Business</h3>
-            <p>We dive deep into your goals, target audience, and market landscape.</p>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3>Planning & Strategy</h3>
-            <p>Creating comprehensive sitemaps, wireframes, and a clear roadmap.</p>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3>Design & Development</h3>
-            <p>Crafting stunning visuals and writing clean, scalable code.</p>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step-card">
-            <div class="step-number">04</div>
-            <h3>Testing & Optimization</h3>
-            <p>Rigorous QA testing across devices to ensure peak performance.</p>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step-card">
-            <div class="step-number">05</div>
-            <h3>Launch & Support</h3>
-            <p>Smooth deployment followed by ongoing maintenance and scaling.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="about" class="why-us section-padding dark-bg">
-      <div class="container">
-        <div class="section-header">
-          <h2>The Omniverse Advantage</h2>
-          <p>Why modern companies partner with us</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card glass-card">
-            <i class="fas fa-rocket feature-icon"></i>
-            <h3>Fast Delivery</h3>
-          </div>
-          <div class="feature-card glass-card">
-            <i class="fas fa-mobile-alt feature-icon"></i>
-            <h3>Responsive Design</h3>
-          </div>
-          <div class="feature-card glass-card">
-            <i class="fas fa-chart-line feature-icon"></i>
-            <h3>SEO Optimized</h3>
-          </div>
-          <div class="feature-card glass-card">
-            <i class="fas fa-shield-alt feature-icon"></i>
-            <h3>Secure Websites</h3>
-          </div>
-          <div class="feature-card glass-card">
-            <i class="fas fa-paint-brush feature-icon"></i>
-            <h3>Modern UI</h3>
-          </div>
-          <div class="feature-card glass-card">
-            <i class="fas fa-headset feature-icon"></i>
-            <h3>Ongoing Support</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Statistics -->
-    <section class="statistics section-padding">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number" data-target="150">0</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="120">0</div>
-            <div class="stat-label">Happy Clients</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="24">0</div>
-            <div class="stat-label">Support Availability</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="15">0</div>
-            <div class="stat-label">Countries Served</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section-padding dark-bg">
-      <div class="container">
-        <div class="section-header">
-          <h2>Client Success Stories</h2>
-          <p>Don't just take our word for it</p>
-        </div>
-        <div class="testimonial-slider">
-          <div class="testimonial-card glass-card">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">"Omniverse transformed our online presence completely. The new platform is blazing fast and our conversion rates have doubled since the launch."</p>
-            <div class="client-info">
-              <div class="client-avatar a1"></div>
-              <div>
-                <h4>Sarah Jenkins</h4>
-                <p>CEO, TechFlow</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card glass-card">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">"Professional, highly skilled and incredibly responsive. The team understood our complex requirements and delivered a stunning SaaS dashboard."</p>
-            <div class="client-info">
-              <div class="client-avatar a2"></div>
-              <div>
-                <h4>David Chen</h4>
-                <p>Founder, Elevate AI</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card glass-card">
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">"The aesthetic and performance of our e-commerce site is top-tier. Omniverse really knows how to build digital experiences that sell."</p>
-            <div class="client-info">
-              <div class="client-avatar a3"></div>
-              <div>
-                <h4>Elena Rodriguez</h4>
-                <p>Marketing Director, LuxBrands</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
-      <div class="container">
-        <div class="contact-wrapper">
-          <div class="contact-info">
-            <h2>Let's build something amazing together.</h2>
-            <p>Ready to elevate your digital presence? Get in touch with our team today.</p>
-            
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                  <h4>Call Us</h4>
-                  <p>+91 7770033799</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>Mumbai, India</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>hello@omniverse.agency</p>
-                </div>
-              </div>
-            </div>
-            
-            <a href="https://wa.me/917770033799" class="btn btn-whatsapp" target="_blank">
-              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-          </div>
-          
-          <div class="contact-form-container glass-card">
-            <form class="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="John Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="john@example.com" required>
-              </div>
-              <div class="form-group">
-                <label for="business-type">Business Type</label>
-                <select id="business-type">
-                  <option value="">Select an option</option>
-                  <option value="startup">Startup</option>
-                  <option value="ecommerce">E-Commerce</option>
-                  <option value="corporate">Corporate / Agency</option>
-                  <option value="local">Local Business</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="project-details">Project Details</label>
-                <textarea id="project-details" rows="4" placeholder="Tell us about your project goals..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-brand">
-          <a href="#" class="logo">Omniverse<span class="dot">.</span></a>
-          <p class="footer-tagline">Crafting your digital presence</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-          </div>
-        </div>
-        <div class="footer-links-group">
-          <h4>Quick Links</h4>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container flex-between">
-          <p>&copy; <span id="year"></span> Omniverse. All rights reserved.</p>
-          <p class="bottom-line">Mumbai Based | Serving Clients Worldwide</p>
-        </div>
-      </div>
-    </footer>
-
-  </body>
 </html>

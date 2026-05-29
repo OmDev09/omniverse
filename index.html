@@ -57,25 +57,133 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="mockup-container">
-          <div class="glass-card mockup mockup-1">
-            <div class="mockup-header">
-              <span class="circle red"></span><span class="circle yellow"></span><span class="circle green"></span>
+        <div class="glass-card workflow-dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-dots">
+              <span class="circle red"></span>
+              <span class="circle yellow"></span>
+              <span class="circle green"></span>
             </div>
-            <div class="mockup-body">
-              <div class="skeleton-line skeleton-title"></div>
-              <div class="skeleton-line"></div>
-              <div class="skeleton-line w-80"></div>
-              <div class="skeleton-box"></div>
-            </div>
+            <div class="dashboard-title">OMNIVERSE PROCESS ENGINE v2.5</div>
+            <div class="dashboard-status-dot"></div>
           </div>
-          <div class="glass-card mockup mockup-2">
-            <div class="mockup-header">
-              <span class="circle red"></span><span class="circle yellow"></span><span class="circle green"></span>
+
+          <div class="dashboard-steps-indicator">
+            <div class="step-indicator-item active" data-step="1"><span>01</span> Inquiry</div>
+            <div class="step-indicator-item" data-step="2"><span>02</span> Build</div>
+            <div class="step-indicator-item" data-step="3"><span>03</span> Launch</div>
+            <div class="step-indicator-item" data-step="4"><span>04</span> Scale</div>
+          </div>
+
+          <div class="dashboard-body">
+            <!-- Step 1 Content -->
+            <div class="dashboard-step-content active" id="step-1-content">
+              <div class="inquiry-card glass-card">
+                <div class="inquiry-header">
+                  <div class="avatar-placeholder">🧑‍💻</div>
+                  <div class="avatar-details" style="flex-grow: 1;">
+                    <div class="skel-line w-60"></div>
+                    <div class="skel-line w-40"></div>
+                  </div>
+                </div>
+                <div class="inquiry-body">
+                  <div class="chat-bubble left">"We need a premium website that converts."</div>
+                  <div class="chat-bubble right pulse-cta">Connecting to Omniverse...</div>
+                </div>
+                <div class="inquiry-action">
+                  <div class="action-btn">Intake Approved</div>
+                </div>
+              </div>
             </div>
-            <div class="mockup-body">
-              <div class="skeleton-line w-60"></div>
-              <div class="skeleton-graph"></div>
+
+            <!-- Step 2 Content -->
+            <div class="dashboard-step-content" id="step-2-content">
+              <div class="build-card glass-card">
+                <div class="build-header">
+                  <span>Code & Design Engine</span>
+                  <span class="pulse-code">&lt;/&gt;</span>
+                </div>
+                <div class="build-layout-grid">
+                  <div class="grid-wireframe-item"
+                    style="border: 1.5px dashed rgba(15, 23, 42, 0.15); border-radius: 6px; padding: 10px;">
+                    <div class="skel-line w-60"></div>
+                    <div class="skel-line w-80"></div>
+                  </div>
+                  <div class="grid-wireframe-item"
+                    style="border: 1.5px dashed rgba(15, 23, 42, 0.15); border-radius: 6px; padding: 10px;">
+                    <div class="skel-box" style="height: 30px; background: rgba(15,23,42,0.04);"></div>
+                  </div>
+                </div>
+                <div class="build-console">
+                  <div class="console-line">&gt; const agency = new Omniverse();</div>
+                  <div class="console-line">&gt; agency.buildCustomWebapp();</div>
+                  <div class="console-line glow-green">&gt; Status: Compiling components... 87%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 Content -->
+            <div class="dashboard-step-content" id="step-3-content">
+              <div class="launch-card glass-card">
+                <div class="launch-preview-browser">
+                  <div class="browser-tab">Live Website Preview</div>
+                  <div class="browser-preview-body">
+                    <div class="preview-hero">
+                      <div class="preview-logo">Omniverse.</div>
+                      <div class="skel-line w-60" style="background:#3b82f6;"></div>
+                      <div class="skel-line w-80"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="launch-preview-mobile">
+                  <div class="mobile-notch"></div>
+                  <div class="mobile-body">
+                    <div class="skel-line w-80"></div>
+                    <div class="skel-box" style="height: 60px; background: rgba(15,23,42,0.04);"></div>
+                  </div>
+                </div>
+                <div class="launch-badge">
+                  <span>🚀 LIVE & RESPONSIVE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 Content -->
+            <div class="dashboard-step-content" id="step-4-content">
+              <div class="scale-card glass-card">
+                <div class="scale-header">
+                  <span>Hypergrowth Engine</span>
+                  <span class="scale-badge">+340%</span>
+                </div>
+                <div class="scale-chart-container">
+                  <svg viewBox="0 0 300 120" class="growth-chart">
+                    <path class="chart-path-bg" d="M10,110 Q80,90 150,50 T290,10" fill="none"
+                      stroke="rgba(59,130,246,0.1)" stroke-width="3" />
+                    <path class="chart-path" d="M10,110 Q80,90 150,50 T290,10" fill="none" stroke="url(#chart-grad)"
+                      stroke-width="4" />
+                    <defs>
+                      <linearGradient id="chart-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ec4899" />
+                        <stop offset="100%" stop-color="#0284c7" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="scale-metrics">
+                  <div class="metric-item">
+                    <span class="metric-val">+248%</span>
+                    <span class="metric-lbl">Traffic</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">+$18.4K</span>
+                    <span class="metric-lbl">Revenue</span>
+                  </div>
+                  <div class="metric-item">
+                    <span class="metric-val">128+</span>
+                    <span class="metric-lbl">Leads</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -92,44 +200,85 @@
       </div>
       <div class="services-grid">
         <div class="service-card glass-card">
-          <i class="fas fa-laptop-code service-icon"></i>
-          <h3>Portfolio Websites</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-laptop-code service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Portfolio Websites</h3>
+          </div>
           <p>Showcase your work with stunning, interactive portfolios designed to impress.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-building service-icon"></i>
-          <h3>Business Websites</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-building service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Business Websites</h3>
+          </div>
           <p>Establish credibility and drive leads with professional corporate web presence.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-shopping-cart service-icon"></i>
-          <h3>E-Commerce</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-shopping-cart service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>E-Commerce</h3>
+          </div>
           <p>Scalable and secure online stores built to maximize your sales conversion.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-pager service-icon"></i>
-          <h3>Landing Pages</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-pager service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Landing Pages</h3>
+          </div>
           <p>High-converting, focused single pages designed for specific marketing campaigns.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-cogs service-icon"></i>
-          <h3>Custom Web Solutions</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-cogs service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Custom Web Solutions</h3>
+          </div>
           <p>Tailor-made web applications to solve your unique business challenges.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-object-group service-icon"></i>
-          <h3>UI/UX Design</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-object-group service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>UI/UX Design</h3>
+          </div>
           <p>Intuitive and beautiful user interfaces focused on delivering great experiences.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-search-plus service-icon"></i>
-          <h3>SEO Optimization</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-search-plus service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>SEO Optimization</h3>
+          </div>
           <p>Data-driven strategies to improve your visibility and rank higher on search engines.</p>
         </div>
         <div class="service-card glass-card">
-          <i class="fas fa-tools service-icon"></i>
-          <h3>Maintenance</h3>
+          <div class="service-icon-wrap">
+            <i class="fas fa-tools service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Maintenance</h3>
+          </div>
           <p>Ongoing support, updates, and security monitoring to keep your site running smoothly.</p>
+        </div>
+        <div class="service-card glass-card">
+          <div class="service-icon-wrap">
+            <i class="fas fa-video service-icon"></i>
+          </div>
+          <div class="service-title-wrap">
+            <h3>Reels & Video Editing</h3>
+          </div>
+          <p>High-retention video editing and creative reels designed to capture attention and scale reach.</p>
         </div>
       </div>
     </div>
@@ -139,14 +288,24 @@
   <section id="portfolio" class="portfolio section-padding dark-bg">
     <div class="container">
       <div class="section-header">
-        <h2>Selected Work</h2>
+        <h2>Glimpses of our work</h2>
         <p>A glimpse into our recent successful digital transformations</p>
       </div>
       <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <div class="portfolio-image proj-1">
+        <div class="portfolio-card wide-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-1"></div>
+              </div>
+            </div>
             <div class="portfolio-overlay">
-              <a href="#" class="view-btn">View Case Study</a>
+              <a href="https://omniverse-fintech.vercel.app" target="_blank" class="view-btn">View Website</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -155,9 +314,19 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <div class="portfolio-image proj-2">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-2"></div>
+              </div>
+            </div>
             <div class="portfolio-overlay">
-              <a href="#" class="view-btn">View Case Study</a>
+              <a href="https://omniverse-nexus.vercel.app" target="_blank" class="view-btn">View Website</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -166,9 +335,19 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <div class="portfolio-image proj-3">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-3"></div>
+              </div>
+            </div>
             <div class="portfolio-overlay">
-              <a href="#" class="view-btn">View Case Study</a>
+              <a href="https://aura-omniverse.vercel.app" target="_blank" class="view-btn">View Website</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -176,14 +355,24 @@
             <p>Corporate</p>
           </div>
         </div>
-        <div class="portfolio-card">
-          <div class="portfolio-image proj-4">
+        <div class="portfolio-card wide-card">
+          <div class="portfolio-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-screen">
+                <div class="screenshot-bg proj-image-4"></div>
+              </div>
+            </div>
             <div class="portfolio-overlay">
-              <a href="#" class="view-btn">View Case Study</a>
+              <a href="https://baithack.vercel.app/" target="_blank" class="view-btn">View Website</a>
             </div>
           </div>
           <div class="portfolio-info">
-            <h3>Lumina AI</h3>
+            <h3>Baithak</h3>
             <p>Startup / SaaS</p>
           </div>
         </div>
