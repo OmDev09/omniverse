@@ -50,6 +50,7 @@ body {
   letter-spacing: -2px;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 1.2s cubic-bezier(0.8, 0, 0.2, 1);
   opacity: 1;

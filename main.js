@@ -202,7 +202,6 @@ setTimeout(() => {
       trigger: '.services-grid',
       start: "top 80%",
     },
-    y: 50,
     opacity: 0,
     duration: 0.8,
     stagger: 0.15,
@@ -215,12 +214,11 @@ setTimeout(() => {
       trigger: '.portfolio-grid',
       start: "top 80%",
     },
-    scale: 0.9,
-    y: 50,
+    scale: 0.95,
     opacity: 0,
     duration: 0.8,
-    stagger: 0.2,
-    ease: "back.out(1.2)"
+    stagger: 0.15,
+    ease: "power2.out"
   });
 
   // 4. Staggered reveal for Process Steps
@@ -229,7 +227,7 @@ setTimeout(() => {
       trigger: '.process-steps',
       start: "top 80%",
     },
-    x: -50,
+    x: -30,
     opacity: 0,
     duration: 0.8,
     stagger: 0.2,
@@ -242,7 +240,6 @@ setTimeout(() => {
       trigger: '.features-bento',
       start: "top 80%",
     },
-    y: 60,
     opacity: 0,
     duration: 0.8,
     stagger: 0.15,
@@ -255,7 +252,6 @@ setTimeout(() => {
       trigger: '.testimonial-slider',
       start: "top 80%",
     },
-    y: 50,
     opacity: 0,
     duration: 0.8,
     stagger: 0.2,
