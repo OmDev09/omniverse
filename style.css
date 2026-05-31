@@ -58,11 +58,37 @@ body {
   transform: scale(1);
 }
 
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 3.2rem;
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 2.3rem;
+    letter-spacing: -1px;
+  }
+}
+
 .intro-text.break {
   letter-spacing: 3rem;
   opacity: 0;
   filter: blur(15px);
   transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .intro-text.break {
+    letter-spacing: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text.break {
+    letter-spacing: 0.8rem;
+  }
 }
 
 body.intro-active {
